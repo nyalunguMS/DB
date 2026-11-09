@@ -32,3 +32,32 @@ INSERT INTO "MyTable"(id,F_name,L_name,Address,Date_Of_Birth,Gender,Phone) VALUE
 
 
 SELECT * FROM "MyTable"
+
+ALTER TABLE "Online"
+    ADD COLUMN Multiplayer BOOLEAN;
+
+SELECT * FROM "Online";
+
+UPDATE "Online"
+SET Multiplayer = TRUE
+WHERE id = 1;
+SELECT * FROM "Online"
+
+UPDATE "Online"
+SET Multiplayer = TRUE
+WHERE id = 2;
+SELECT * FROM "Online"
+
+UPDATE "Online"
+SET Multiplayer = false
+WHERE id = 3;
+SELECT * FROM "Online"
+
+ALTER TABLE "Online"
+ALTER COLUMN Multiplayer TYPE VARCHAR(20);
+SELECT * FROM "Online"
+
+
+DELETE FROM "Online"
+WHERE id = 3;
+SELECT * FROM "Online"
